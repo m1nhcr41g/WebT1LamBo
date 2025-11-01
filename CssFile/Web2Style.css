@@ -26,15 +26,25 @@ body {
 }
 
 .logo {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 150px;
   margin: 0 auto 20px;
-  background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/T1_logo.svg/1200px-T1_logo.svg.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.8));
   animation: float 3s ease-in-out infinite;
+}
+
+.logo-inner {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  animation: pulse 2s ease-in-out infinite;
 }
 
 @keyframes float {

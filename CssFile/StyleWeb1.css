@@ -231,14 +231,6 @@ h1 {
   pointer-events: none;
 }
 
-.poop {
-  position: fixed;
-  font-size: 40px;
-  z-index: 20;
-  pointer-events: none;
-  animation: fallDown 2s ease-in forwards;
-}
-
 @keyframes fallDown {
   0% {
     transform: translateY(-100vh) rotate(0deg);
