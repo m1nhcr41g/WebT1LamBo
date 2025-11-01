@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CssFile/StyleWeb1.css" />
+    <title>T1 - Rise to Glory</title>
+  </head>
+  <body>
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+      <div class="logo-wrapper">
+        <div class="logo">
+          <div class="logo-inner">
+            <img
+              src="Image/T1_Logo-removebg-preview.png"
+              alt="T1 Logo"
+              class="logo-img"
+            />
+          </div>
+        </div>
+      </div>
+
+      <h1>T1 ESPORTS</h1>
+      <p class="tagline">Tao là bố chúng mày, chúng mày là con tao</p>
+
+      <div class="buttons">
+        <button class="btn" onclick="alert('Chào mừng đến với T1!')">
+          Tìm hiểu thêm
+        </button>
+        <button class="btn" onclick="alert('Đang cập nhật...')">
+          Xem đội hình
+        </button>
+        <button class="btn" id="bossBtn">Danh sách những đứa con</button>
+      </div>
+
+      <div id="poopContainer"></div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">4x</div>
+          <div class="stat-label">World Champions</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">LCK Titles</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">#1</div>
+          <div class="stat-label">Global Ranking</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("bossBtn").addEventListener("click", function () {
+        window.location.href = "SonOfT1.html";
+      });
+    </script>
+  </body>
+</html>
