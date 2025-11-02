@@ -7,23 +7,38 @@
     <title>Gia phả nhà T1</title>
   </head>
   <body>
-    <div class="header">
-      <div class="logo">
-        <div class="logo-inner">
+    <header class="header">
+      <div class="header-container">
+        <a href="index.html" class="header-logo">
           <img
             src="Image/T1_Logo-removebg-preview.png"
             alt="T1 Logo"
-            class="logo-img"
+            class="logo-image"
           />
-        </div>
+          <div class="logo-text">
+            <span class="logo-title">T1 ESPORTS</span>
+            <span class="logo-subtitle"> Công cha như núi Thái Sơn </span>
+          </div>
+        </a>
+
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+
+        <nav class="nav-menu" id="navMenu">
+          <a href="index.html" class="nav-link active">Trang Chủ</a>
+          <a href="T1Roaster.html" class="nav-link">Đội Hình</a>
+          <a href="SonOfT1.html" class="nav-link">Danh Sách Những Đứa Con</a>
+          <a href="#" class="nav-link">Thành Tích</a>
+        </nav>
       </div>
+    </header>
+    <div class="page-header">
       <h1>Gia phả nhà T1</h1>
       <p class="subtitle">Tình cha ấm áp như vầng thái dương</p>
       <button id="playMusic">Đôi lời gửi tới các con</button>
       <audio id="bgMusic" loop>
         <source
           src="BgMusic/TÌNH CHA - NGỌC SƠN ｜ Official Music Video.mp4"
-          type="video/mp4"
+          type="audio/mp4"
         />
       </audio>
     </div>
@@ -87,9 +102,9 @@
             <div class="team-name">Anyone's Legend (AL)</div>
             <div class="defeat-count">
               Số lần thua:
-              <span class="number">Không xem lol nên đéo biết</span>
+              <span class="number">2</span>
             </div>
-            <div class="last-defeat">Lần cuối: Worlds 2025 QuaterFinal</div>
+            <div class="last-defeat">Lần cuối: Worlds 2025 Quaterfinals</div>
           </div>
           <div class="team-card">
             <div class="team-name">EDward Gaming (EDG)</div>
@@ -108,9 +123,9 @@
           <div class="team-card">
             <div class="team-name">Top Esports (TES)</div>
             <div class="defeat-count">
-              Số lần thua: <span class="number">10+</span>
+              Số lần thua: <span class="number">11+</span>
             </div>
-            <div class="last-defeat">Lần cuối: Worlds 2023</div>
+            <div class="last-defeat">Lần cuối: Worlds 2025 Semifinals</div>
           </div>
           <div class="team-card">
             <div class="team-name">Weibo Gaming (WBG)</div>

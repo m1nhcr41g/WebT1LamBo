@@ -7,16 +7,31 @@
     <title>T1 Roster - Đội Hình Huyền Thoại</title>
   </head>
   <body>
-    <div class="header">
-      <div class="logo">
-        <div class="logo-inner">
+    <header class="header">
+      <div class="header-container">
+        <a href="index.html" class="header-logo">
           <img
             src="Image/T1_Logo-removebg-preview.png"
             alt="T1 Logo"
-            class="logo-img"
+            class="logo-image"
           />
-        </div>
+          <div class="logo-text">
+            <span class="logo-title">T1 ESPORTS</span>
+            <span class="logo-subtitle"> Công cha như núi Thái Sơn </span>
+          </div>
+        </a>
+
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+
+        <nav class="nav-menu" id="navMenu">
+          <a href="index.html" class="nav-link active">Trang Chủ</a>
+          <a href="T1Roaster.html" class="nav-link">Đội Hình</a>
+          <a href="SonOfT1.html" class="nav-link">Danh Sách Những Đứa Con</a>
+          <a href="#" class="nav-link">Thành Tích</a>
+        </nav>
       </div>
+    </header>
+    <div class="page-header">
       <h1>Các ông bố người Hàn</h1>
       <p class="season">Season 2024-2025</p>
     </div>
