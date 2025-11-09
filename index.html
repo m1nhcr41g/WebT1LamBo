@@ -5,21 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CssFile/StyleWeb1.css" />
     <title>T1 - Rise to Glory</title>
+    <style>
+      /* 🌟 Video YouTube thay đồng hồ */
+      #youtubeVideo {
+        display: none; /* ẩn trước khi kết thúc đếm ngược */
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
-    <div class="intro-screen" id="introScreen" onclick="closeIntro()">
-      <div class="crown-container" id="crownContainer"></div>
-      <img
-        src="Image/fakernghevcl.jpg"
-        alt="T1 Worlds 2024"
-        class="intro-image"
-      />
-      <div class="skip-text">Nhấn vào bất kỳ đâu để tiếp tục...</div>
-
-      <audio id="introAudio" preload="auto">
-        <source src="BgMusic/chaobodicaccon.mp4" type="audio/mp4" />
-      </audio>
-    </div>
     <header class="header">
       <div class="header-container">
         <a href="#" class="header-logo">
@@ -30,7 +25,7 @@
           />
           <div class="logo-text">
             <span class="logo-title">T1 ESPORTS</span>
-            <span class="logo-subtitle"> Công cha như núi Thái Sơn </span>
+            <span class="logo-subtitle">Công cha như núi Thái Sơn</span>
           </div>
         </a>
 
@@ -44,6 +39,7 @@
         </nav>
       </div>
     </header>
+
     <div class="main-wrapper">
       <div class="particles" id="particles"></div>
 
@@ -61,6 +57,7 @@
         </div>
         <h1>T1 ESPORTS</h1>
         <p class="tagline">Tao là bố chúng mày, chúng mày là con tao</p>
+
         <div class="countdown-section">
           <div class="countdown-title">CHUNG KẾT WORLDS 2025</div>
           <div class="countdown-subtitle">T1 vs KT</div>
@@ -69,6 +66,7 @@
             ICT - 09/11/2025
           </div>
 
+          <!-- ⏰ Countdown -->
           <div class="countdown-timer" id="countdown">
             <div class="countdown-box">
               <div class="countdown-number" id="days">00</div>
@@ -87,6 +85,19 @@
               <div class="countdown-label">Giây</div>
             </div>
           </div>
+        </div>
+
+        <!-- 🌟 Video YouTube hiện khi kết thúc countdown -->
+        <div id="youtubeVideo">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/ADaZLxI3uWg?autoplay=1&rel=0&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
 
         <div class="buttons">
@@ -119,55 +130,28 @@
         </div>
       </div>
     </div>
+
     <script>
-      function fallingCrowns() {
-        const container = document.getElementById("crownContainer");
-        const icons = ["👑"];
-        const numCrowns = 15;
-
-        for (let i = 0; i < numCrowns; i++) {
-          const crown = document.createElement("div");
-          crown.className = "crown";
-          crown.textContent = icons[Math.floor(Math.random() * icons.length)];
-          crown.style.left = Math.random() * 100 + "%";
-          crown.style.fontSize = Math.random() * 1.5 + 1.5 + "rem";
-          crown.style.animationDuration = Math.random() * 3 + 3 + "s";
-          crown.style.animationDelay = Math.random() * 2 + "s";
-          container.appendChild(crown);
-        }
-      }
-
-      fallingCrowns();
-
-      function closeIntro() {
-        const intro = document.getElementById("introScreen");
-        const audio = document.getElementById("introAudio");
-
-        audio.play().catch((err) => {
-          console.log("Không thể phát nhạc:", err);
-        });
-
-        intro.classList.add("fade-out");
-      }
-
-      document.getElementById("bossBtn").addEventListener("click", function () {
-        window.location.href = "SonOfT1.html";
-      });
+      // 👉 Nút "Danh sách những đứa con"
       document.getElementById("bossBtn").addEventListener("click", function () {
         window.location.href = "SonOfT1.html";
       });
 
+      // 👉 Countdown tới chung kết
       const finalsDate = new Date("2025-11-09T14:00:00+07:00").getTime();
 
       function updateCountdown() {
         const now = new Date().getTime();
         const distance = finalsDate - now;
 
+        const countdownEl = document.getElementById("countdown");
+        const youtubeEl = document.getElementById("youtubeVideo");
+
         if (distance < 0) {
-          document.getElementById("countdown").innerHTML =
-            '<div class="trophy-icon">🏆</div>';
-          document.getElementById("message").innerHTML =
-            "🎉 T1 VĨNH VIỄN BẤT BẠI! GGWP! 🎉";
+          // 🔥 Khi hết thời gian: ẩn đồng hồ
+          countdownEl.style.display = "none";
+          // 🔥 Hiện video
+          youtubeEl.style.display = "block";
           return;
         }
 
